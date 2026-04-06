@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeopleDesk — HR Assistant</title>
+  <meta name="description" content="PeopleDesk: An intelligent HR chatbot for employee self-service.">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="chat-app">
+
+    <!-- ════════════════════════════════════════
+         WELCOME OVERLAY — First-run experience
+         ════════════════════════════════════════ -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+      <div class="welcome-icon">🏢</div>
+      <h1 class="welcome-title">PeopleDesk</h1>
+      <p class="welcome-subtitle">
+        Your intelligent HR assistant. Get instant answers on leave, payroll, benefits, policies, and more.
+      </p>
+      <div class="welcome-topics">
+        <span class="welcome-topic"><span class="topic-icon">🏖️</span> Leave</span>
+        <span class="welcome-topic"><span class="topic-icon">💰</span> Payroll</span>
+        <span class="welcome-topic"><span class="topic-icon">📚</span> Training</span>
+        <span class="welcome-topic"><span class="topic-icon">🏥</span> Benefits</span>
+        <span class="welcome-topic"><span class="topic-icon">📋</span> Policies</span>
+        <span class="welcome-topic"><span class="topic-icon">🏠</span> Remote Work</span>
+      </div>
+      <button class="welcome-start-btn" id="startBtn">Start a Conversation</button>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         HEADER — Bot identity, status & actions
+         ════════════════════════════════════════ -->
+    <header class="chat-header">
+      <div class="bot-avatar">
+        <div class="bot-avatar-inner">🏢</div>
+        <span class="bot-avatar-status"></span>
+      </div>
+      <div class="header-info">
+        <div class="header-name">PeopleDesk</div>
+        <div class="header-status-text">HR Assistant · Always online</div>
+      </div>
+      <div class="header-actions">
+        <button class="header-btn" id="soundToggle" title="Enable sounds" aria-label="Toggle sound">
+          🔇
+        </button>
+        <button class="header-btn" id="themeToggle" title="Switch to light mode" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- ════════════════════════════════════════
+         CATEGORY BAR — Quick topic navigation
+         ════════════════════════════════════════ -->
+    <nav class="category-bar" aria-label="HR Topics">
+      <button class="category-chip" data-topic="Leave policy">
+        <span class="chip-icon">🏖️</span> Leave
+      </button>
+      <button class="category-chip" data-topic="Payroll info">
+        <span class="chip-icon">💰</span> Payroll
+      </button>
+      <button class="category-chip" data-topic="Training options">
+        <span class="chip-icon">📚</span> Training
+      </button>
+      <button class="category-chip" data-topic="Benefits overview">
+        <span class="chip-icon">🏥</span> Benefits
+      </button>
+      <button class="category-chip" data-topic="Company policies">
+        <span class="chip-icon">📋</span> Policies
+      </button>
+      <button class="category-chip" data-topic="Remote work policy">
+        <span class="chip-icon">🏠</span> Remote
+      </button>
+      <button class="category-chip" data-topic="Performance review">
+        <span class="chip-icon">📊</span> Performance
+      </button>
+      <button class="category-chip" data-topic="Contact HR">
+        <span class="chip-icon">📞</span> Contact
+      </button>
+    </nav>
+
+    <!-- ════════════════════════════════════════
+         MESSAGE AREA — Scrollable conversation
+         ════════════════════════════════════════ -->
+    <main class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+      <!-- Messages injected dynamically by script.js -->
+    </main>
+
+    <!-- ════════════════════════════════════════
+         INPUT AREA — Compose & send
+         ════════════════════════════════════════ -->
+    <div class="chat-input-area">
+      <div class="input-wrapper">
+        <input type="text" class="chat-input" id="chatInput" placeholder="Ask an HR question…" autocomplete="off"
+          aria-label="Type your message">
+      </div>
+      <button class="send-btn" id="sendBtn" aria-label="Send message">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13" />
+          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         FOOTER — Branding
+         ════════════════════════════════════════ -->
+    <div class="chat-footer">
+      PEOPLEDESK · POWERED BY YOUR HR TEAM
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
