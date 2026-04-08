@@ -7,9 +7,12 @@
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
-const chatApp = $('.chat-app'), welcomeOverlay = $('#welcomeOverlay'), startBtn = $('#startBtn');
-const chatMessages = $('#chatMessages'), chatInput = $('#chatInput'), sendBtn = $('#sendBtn');
-const themeToggle = $('#themeToggle'), soundToggle = $('#soundToggle'), categoryBar = $('.category-bar');
+var chatApp = $('.chat-app'), welcomeOverlay = $('#welcomeOverlay');
+var startBtn = $('#startBtn');
+var chatMessages = $('#chatMessages'), chatInput = $('#chatInput'), sendBtn = $('#sendBtn');
+var themeToggle = $('#themeToggle');
+var soundToggle = $('#soundToggle');
+var categoryBar = $('.category-bar');
 
 let isBotTyping = false, soundEnabled = false;
 
@@ -807,7 +810,7 @@ const knowledgeBase = [
     {
         id: 'greeting',
         keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening', 'greetings', 'welcome'],
-        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.\n\nI can answer questions about all company policies including leave, performance, compensation, disciplinary, dress code, and more.\n\nI can also handle **\u201Cwhat if\u201D scenarios** \u2014 try asking:\n*\u201CWhat if I fail probation?\u201D*\n*\u201CWhat if two employees get married?\u201D*",
+        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.\n\nHow may I assist you today? \n\nI can also handle **\u201Cwhat if\u201D scenarios** \u2014 try asking:\n*\u201CWhat if I fail probation?\u201D*\n*\u201CWhat if two employees get married?\u201D*",
         card: null
     },
     {
@@ -997,7 +1000,7 @@ async function handleUserMessage(text) {
 sendBtn.addEventListener('click', () => handleUserMessage(chatInput.value));
 chatInput.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleUserMessage(chatInput.value); } });
 chatInput.addEventListener('input', updateSendBtn);
-categoryBar.addEventListener('click', e => { const c = e.target.closest('.category-chip'); if (c) handleUserMessage(c.dataset.topic); });
+// categoryBar.addEventListener('click', e => { const c = e.target.closest('.category-chip'); if (c) handleUserMessage(c.dataset.topic); });
 
 startBtn.addEventListener('click', () => {
     welcomeOverlay.classList.add('hidden'); playPop();
@@ -1018,13 +1021,13 @@ function setTheme(t) {
 
 themeToggle.addEventListener('click', () => { playTick(); const c = document.documentElement.getAttribute('data-theme'); setTheme(c === 'dark' ? 'light' : 'dark'); });
 
-soundToggle.addEventListener('click', () => {
-    soundEnabled = !soundEnabled;
-    soundToggle.classList.toggle('active', soundEnabled);
-    soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
-    soundToggle.title = soundEnabled ? 'Mute' : 'Enable sounds';
-    if (soundEnabled) playTick();
-});
+// soundToggle.addEventListener('click', () => {
+//     soundEnabled = !soundEnabled;
+//     soundToggle.classList.toggle('active', soundEnabled);
+//     soundToggle.textContent = soundEnabled ? '🔊' : '🔇';
+//     soundToggle.title = soundEnabled ? 'Mute' : 'Enable sounds';
+//     if (soundEnabled) playTick();
+// });
 
 (function init() {
     const s = localStorage.getItem('coronationx-theme');
