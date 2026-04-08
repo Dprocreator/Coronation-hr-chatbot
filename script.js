@@ -558,7 +558,7 @@ const knowledgeBase = [
     },
     {
         id: 'dresscode',
-        keywords: ['dress', 'dress code', 'attire', 'clothing', 'appearance', 'professional dress', 'casual', 'coronation way', 'business casual', 'business formal', 'grooming', 'suit', 'jeans', 'kaftan', 'ankara'],
+        keywords: ['dress', 'dress code', 'attire', 'clothing','shoe', 'appearance', 'professional dress', 'casual', 'coronation way', 'business casual', 'business formal', 'grooming', 'suit', 'jeans', 'kaftan', 'ankara'],
         response: "Coronation X has two dress code forms: Business Casual and Business Professional.",
         card: {
             icon: '\u{1F454}', iconClass: 'teal', title: 'Dress Code Policy',
