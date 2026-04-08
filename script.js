@@ -807,7 +807,7 @@ const knowledgeBase = [
     {
         id: 'greeting',
         keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening', 'greetings', 'welcome'],
-        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.",
+        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.\n\nI can answer questions about all company policies including leave, performance, compensation, disciplinary, dress code, and more.\n\nI can also handle **\u201Cwhat if\u201D scenarios** \u2014 try asking:\n*\u201CWhat if I fail probation?\u201D*\n*\u201CWhat if two employees get married?\u201D*",
         card: null
     },
     {
@@ -824,25 +824,25 @@ const knowledgeBase = [
     },
     {
         id: 'contact',
-        keywords: ['contact', 'hr', 'phone', 'reach', 'speak to', 'talk to', 'human', 'person', 'agent', 'human resources'],
-        response: "Here is how to reach the Coronation X HR team.",
+        keywords: ['contact', 'hr', 'phone', 'reach', 'speak to', 'talk to', 'human', 'person', 'agent', 'human resources', 'royal', 'timilehin', 'email', 'call'],
+        response: "Need further assistance? Reach out to our HR team directly.",
         card: {
-            icon: '\u{1F4DE}', iconClass: 'amber', title: 'Contact Human Resources',
+            icon: '\u{1F4DE}', iconClass: 'amber', title: 'Contact HR Team',
             items: [
+                '<strong>Royal</strong> \u2014 oloturoyal@gmail.com | 09132304305',
+                '<strong>Timilehin</strong> \u2014 ajibolatimilehindavid@gmail.com | 0911 836 0376',
                 '<strong>Office</strong> \u2014 10, Amodu Ojikutu Street, Victoria Island, Lagos',
-                '<strong>Department</strong> \u2014 Human Resources',
-                '<strong>Policies</strong> \u2014 HR handles interpretation and implementation of all handbook policies',
-                '<strong>Records</strong> \u2014 HR maintains all employee records'
+                '<strong>Note</strong> \u2014 For any policy questions I cannot answer, please contact Royal or Timilehin directly'
             ],
-            action: 'Reach Out to HR \u2192'
+            action: 'Reach Out Now \u2192'
         }
     }
 ];
 
 const fallbacks = [
-    "I don\u2019t have specific information on that topic in the Coronation X handbook. Could you try rephrasing your question? For example, ask about **leave**, **performance**, **salary**, **dress code**, **disciplinary**, or **maternity** policies.",
-    "I couldn\u2019t match that to a Coronation X policy. I cover: Employment, Code of Conduct, Total Rewards, Performance, L&D, Dress Code, Leave, Disciplinary, Harassment, Remote Work, and more. Try asking about one of these!",
-    "That\u2019s a great question, but I don\u2019t have a specific answer for it in my knowledge base. Please contact **Human Resources** directly for guidance on this topic."
+    "I don\u2019t have specific information on that topic. Please reach out to **Royal** (oloturoyal@gmail.com | 09132304305) or **Timilehin** (ajibolatimilehindavid@gmail.com | 0911 836 0376) for further assistance.",
+    "I couldn\u2019t match that to a specific policy. Try asking about **leave**, **performance**, **salary**, **dress code**, **disciplinary**, or **maternity**. Or contact **Royal** (09132304305) or **Timilehin** (0911 836 0376) directly.",
+    "That\u2019s a great question, but it\u2019s outside my current knowledge base. Please contact **Royal** at oloturoyal@gmail.com or **Timilehin** at ajibolatimilehindavid@gmail.com for guidance."
 ];
 
 
@@ -1004,7 +1004,7 @@ startBtn.addEventListener('click', () => {
     setTimeout(() => {
         addDateSeparator();
         setTimeout(() => {
-            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nI can answer questions about all company policies — employment, leave, compensation, performance, disciplinary, dress code, and more.\n\n*Trust · Innovation · Leadership*", null);
+            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nI can answer questions about all company policies — employment, leave, compensation, performance, disciplinary, dress code, and more.\n\nTry asking anything like:\n• *\"What is the probation period?\"*\n• *\"What if I fail probation?\"*\n• *\"How many leave days do I get?\"*\n\n*Trust · Innovation · Leadership*", null);
         }, 300);
     }, 400);
 });
