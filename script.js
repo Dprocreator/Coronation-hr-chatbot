@@ -168,7 +168,7 @@ function getWhatIfResponse(input) {
         { keys: ['paternity', 'father', 'dad'], topic: 'paternity' },
         { keys: ['leave', 'vacation', 'annual leave', 'time off', 'leave days'], topic: 'leave' },
         { keys: ['notice', 'resign', 'resignation', 'quit', 'exit', 'leaving'], topic: 'notice' },
-        { keys: ['dress', 'dress code', 'attire', 'clothing', 'casual', 'coronation way'], topic: 'dress_code' },
+        { keys: ['dress', 'dress code', 'attire', 'clothing','shoe','casual', 'coronation way'], topic: 'dress_code' },
         { keys: ['misconduct', 'disciplinary', 'warning', 'fired', 'sacked', 'terminated', 'theft', 'fraud', 'stealing', 'sanction'], topic: 'misconduct' },
         { keys: ['marry', 'married', 'spouse', 'couple', 'wedding', 'husband', 'wife', 'family member', 'relative'], topic: 'marriage' },
         { keys: ['absent', 'absence', 'awol', 'abscond', 'no show', 'unauthorized absence'], topic: 'absence' },
