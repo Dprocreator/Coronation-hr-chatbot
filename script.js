@@ -1007,7 +1007,7 @@ startBtn.addEventListener('click', () => {
     setTimeout(() => {
         addDateSeparator();
         setTimeout(() => {
-            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nI can answer questions about all company policies — employment, leave, compensation, performance, disciplinary, dress code, and more.\n\nTry asking anything like:\n• *\"What is the probation period?\"*\n• *\"What if I fail probation?\"*\n• *\"How many leave days do I get?\"*\n\n*Trust · Innovation · Leadership*", null);
+            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nHow many I assist you today?\n\n*", null);
         }, 300);
     }, 400);
 });
