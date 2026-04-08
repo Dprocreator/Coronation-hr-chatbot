@@ -570,7 +570,8 @@ const knowledgeBase = [
                 '<strong>Not Allowed</strong> \u2014 Jeans, tracksuits, flip-flops, sport shoes, mini dresses, ripped clothing',
                 '<strong>Grooming</strong> \u2014 Neat hair, modest makeup, no nail art. Hijabs permitted (solid colors)',
                 '<strong>Enforcement</strong> \u2014 1st=Verbal Warning, 2nd=1st Warning Letter, 3rd=2nd Warning Letter'
-            ]
+            ],
+                action: 'Read Dress Code \u2192'
         }
     },
     {
