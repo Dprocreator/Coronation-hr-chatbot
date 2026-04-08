@@ -810,7 +810,7 @@ const knowledgeBase = [
     {
         id: 'greeting',
         keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening', 'greetings', 'welcome'],
-        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.\n\nHow may I assist you today? \n\nI can also handle **\u201Cwhat if\u201D scenarios** \u2014 try asking:\n*\u201CWhat if I fail probation?\u201D*\n*\u201CWhat if two employees get married?\u201D*",
+        response: "Hello! \u{1F44B} Welcome to the **Coronation X Limited** HR Assistant.\n\nHow may I assist you today? \n\n",
         card: null
     },
     {
