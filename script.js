@@ -1007,7 +1007,7 @@ startBtn.addEventListener('click', () => {
     setTimeout(() => {
         addDateSeparator();
         setTimeout(() => {
-            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nHow many I assist you today?\n\n*", null);
+            addBotMessage("Welcome to **Coronation X Limited** HR Assistant! 👋\n\nHow may I assist you today?\n\n", null);
         }, 300);
     }, 400);
 });
